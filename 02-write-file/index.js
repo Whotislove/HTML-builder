@@ -12,3 +12,7 @@ stdin.on('data', (data) => {
 }
 );
 process.on('exit', ()=> console.log('Приходите ещё'));
+
+process.on('SIGINT', () => {
+  process.exit();
+});
